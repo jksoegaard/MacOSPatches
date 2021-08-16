@@ -1,0 +1,12 @@
+--- file_cmds-321.100.11/touch/touch.c	2021-08-16 14:24:14.000000000 +0200
++++ touch.c	2021-08-16 15:59:37.000000000 +0200
+@@ -216,7 +216,7 @@
+ 		}
+ 
+ 		/* Try setattrlist(2). */
+-		if (!setattrlist(*argv, &ts_req, &ts_struct, sizeof(ts_struct), 0))
++		if (!setattrlist(*argv, &ts_req, &ts_struct, sizeof(ts_struct), utimes_f == lutimes ? FSOPT_NOFOLLOW : 0))
+ 			continue;
+ 
+ 		/* If the user specified a time, nothing else we can do. */
+		
