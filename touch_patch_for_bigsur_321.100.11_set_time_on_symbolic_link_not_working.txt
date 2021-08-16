@@ -1,0 +1,1 @@
+See https://apple.stackexchange.com/questions/425660/i-do-not-understand-why-touch-h-is-not-working-as-documented-in-the-man-page/425730 for more information.
